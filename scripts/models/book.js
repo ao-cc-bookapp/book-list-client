@@ -24,6 +24,11 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
     return template(this);
   };
 
+  Book.fetchOne = (id) => {
+    return $.getJSON(url + '/' + id)
+        .catch(err => console.error(err))
+  }
+  
   Book.all = [];
   Book.loadAll = rows => Book.all = rows.sort((a, b) => b.title - a.title).map(book => new Book(book));
 

@@ -9,8 +9,11 @@ page('/*', (ctx, next) => {
   next();
 })
 
-page('/', app.bookView.init);
-page('/books/:book_id', (ctx) => app.Books.fetchOne(ctx.params.id).then(app.singleBookView.init));
-page('/books/new', app.createPage.init);
+// page('/', () => console.log('hola'));
+
+page('/', app.bookView.initIndexPage);
+
+// page('/books/:book_id', (ctx) => app.Books.fetchOne(ctx.params.id).then(app.singleBookView.init));
+// page('/books/new', app.createPage.init);
 
 page.start();

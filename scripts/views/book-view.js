@@ -5,9 +5,10 @@ var app = app || {};
 (function(module) {
   const bookView = {};
 
-  bookView.initIndexPage = function() {
+  bookView.initIndexPage = function() { 
+    console.log('running initIndexPage');
     $('.container').hide();
-    $('.book-view').show();
+    $('#book-view').show();
     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
   };
 
@@ -20,18 +21,18 @@ $(function() {
 
 
 // Displays a single Book
-(function(module) {
-  const singleBookView = {};
+// (function(module) {
+//   const singleBookView = {};
 
-  singleBookView.initIndexPage = function() {
-    $('.container').hide();
-    $('.book-view').show();
-    module.Book.all.map(book => $('#book-list').append(book.toHtml()));
-  };
+//   singleBookView.initIndexPage = function() {
+//     $('.container').hide();
+//     $('.book-view').show();
+//     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
+//   };
 
-  module.singleBookView = singleBookView;
-})(app);
+//   module.singleBookView = singleBookView;
+// })(app);
 
-$(function() {
-  app.Book.fetchOne(app.singleBookView.initIndexPage);
-}); 
+// $(function() {
+//   app.Book.fetchOne(app.singleBookView.initIndexPage);
+// }); 

@@ -13,7 +13,7 @@ page('/*', (ctx, next) => {
 
 page('/', app.bookView.initIndexPage);
 
-// page('/books/:book_id', (ctx) => app.Books.fetchOne(ctx.params.id).then(app.singleBookView.init));
+page('/books/:book_id', (ctx) => app.Books.fetchOne(ctx.params.id).then(app.singleBookView.initSinglePage));
 // page('/books/new', app.createPage.init);
 
 page.start();

@@ -35,6 +35,10 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
   };
 
 
+  Book.emptyArray = function() {
+    Book.all.length = 0;
+  };
+
   Book.create = newBook =>
   $.post(`${ENV.apiUrl}/api/v1/books`, newBook)
    .catch(err => console.error(err));
@@ -45,6 +49,8 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.fetchAll = callback =>
     $.get(`${ENV.apiUrl}/api/v1/books`)
+      .then(console.log('Just Retreived the books from the DB'))
+      // .then(Book.all = [])
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);

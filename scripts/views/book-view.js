@@ -7,6 +7,8 @@ var app = app || {};
 
   bookView.initIndexPage = function() { 
     console.log('running  initIndexPage THIRD');
+    // module.Book.all.length = 0;
+    app.Book.fetchAll();
     $('.container').hide();
     $('#book-view').show();
     $('#book-list').empty();
@@ -42,22 +44,3 @@ $(function() {
 });
 
 console.log('This is outside the function in question! SECOND');
-
-
-
-// // Displays a single Book
-// (function(module) {
-//   const singleBookView = {};
-
-//   singleBookView.initSinglePage = function() {
-//     $('.container').hide();
-//     $('#detail-view').show();
-//     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
-//   };
-
-//   module.singleBookView = singleBookView;
-// })(app);
-
-// $(function() {
-//   app.Book.fetchOne(app.singleBookView.initIndexPage);
-// }); 

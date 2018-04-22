@@ -23,10 +23,7 @@ var app = app || {};
         console.log('newBook: ',newBook);
         app.Book.create(newBook).then(page('/'));
         $('#create-form-name').val('');
-})
-    // $('#single-book').empty();
-    // let template = Handlebars.compile($('#single-book-template').text());
-    // $('#detail-view').append(template(singleBook));
+    })
   };
 
   module.createBookView = createBookView;

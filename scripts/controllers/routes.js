@@ -13,10 +13,10 @@ page('/*', (ctx, next) => {
 
 page('/', app.bookView.initIndexPage);
 
-page('/books/create', app.createBookView.initCreatePage);
+page('/create', app.createBookView.initCreatePage);
 
 
-page('/books/:book_id', (ctx) => {
+page('/:book_id', (ctx) => {
   console.log('ABOUT TO CALL FETCHONE!!!');
   console.log('Book id', ctx.params.book_id);
   app.Book.fetchOne(ctx.params.book_id)

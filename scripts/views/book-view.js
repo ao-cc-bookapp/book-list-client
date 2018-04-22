@@ -9,6 +9,7 @@ var app = app || {};
     console.log('running  initIndexPage THIRD');
     $('.container').hide();
     $('#book-view').show();
+    $('#book-list').empty();
     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
   };
 
@@ -26,7 +27,7 @@ var app = app || {};
     console.log('id selected:', id);
     // const id = '1';
     // page('/books/' + id)
-    page(`/books/${id}`)
+    page(`/${id}`)
   })
 
   module.bookView = bookView;

@@ -34,6 +34,12 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
       .catch(err => console.error(err));
   };
 
+
+  Book.create = newBook =>
+  $.post(`${ENV.apiUrl}/api/v1/books`, newBook)
+   .catch(err => console.error(err));
+
+
   Book.all = [];
   Book.loadAll = rows => Book.all = rows.sort((a, b) => b.title - a.title).map(book => new Book(book));
 

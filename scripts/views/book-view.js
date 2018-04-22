@@ -22,9 +22,11 @@ var app = app || {};
   
   $('#book-view ul').on('click', '.book-container', (event) => {
     console.log('Click detected');
-    const id = $(event.target).parent().data('book_id');
+    const id = $(event.currentTarget).parent().data('bookid');
+    console.log('id selected:', id);
     // const id = '1';
-    page('/books/' + id)
+    // page('/books/' + id)
+    page(`/books/${id}`)
   })
 
   module.bookView = bookView;
@@ -42,7 +44,7 @@ console.log('This is outside the function in question! SECOND');
 
 
 
-// Displays a single Book
+// // Displays a single Book
 // (function(module) {
 //   const singleBookView = {};
 

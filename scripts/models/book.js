@@ -27,7 +27,10 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
   };
 
   Book.fetchOne = (id) => {
-    return $.getJSON(`${ENV.apiUrl}` + '/' + id)
+    console.log('RUNNING FETCHONE FROM BOOK.JS');
+    console.log('ENV.apiURL: ',`${ENV.apiUrl}`);
+    console.log('fetchOne ID',id);
+    return $.getJSON(`${ENV.apiUrl}` + '/api/v1/books/' + id)
       .catch(err => console.error(err));
   };
 

@@ -13,7 +13,17 @@ page('/*', (ctx, next) => {
 
 page('/', app.bookView.initIndexPage);
 
-page('/books/:book_id', (ctx) => app.Books.fetchOne(ctx.params.id).then(app.singleBookView.initSinglePage));
+page('/books/create', app.createBookView.initCreatePage);
+
+
+page('/books/:book_id', (ctx) => {
+  console.log('ABOUT TO CALL FETCHONE!!!');
+  console.log('Book id', ctx.params.book_id);
+  app.Book.fetchOne(ctx.params.book_id)
+  .then((singleBook) => {
+    app.singleBookView.initSinglePage(singleBook);
+  });
+});
 // page('/books/new', app.createPage.init);
 
 page.start();

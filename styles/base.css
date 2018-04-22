@@ -12,8 +12,8 @@ main {
 }
 
 header {
-  position: fixed;
-  z-index: 99;
+  /* position: fixed;
+  z-index: 99; */
   background-color: #444;
   padding: 1.5vw 0;
   width: 100%;

@@ -11,7 +11,7 @@ header img {
 header h1 {
   display: inline-block;
   font-size: 5vw;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
   left: 0;
@@ -19,4 +19,24 @@ header h1 {
   width: 50%;
   height: 30%;
   margin: auto;
+}
+
+li.book-items {
+  background-color:white;
+  border: 1px black solid;
+}
+
+li.single-book {
+  background-color:white;
+  border: 1px black solid;
+}
+
+
+
+ul#book-list {
+  margin-top: 10%;
+}
+
+nav {
+  margin-top: 160px;
 }

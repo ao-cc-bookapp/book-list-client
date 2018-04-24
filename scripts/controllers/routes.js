@@ -24,7 +24,10 @@ page('/:book_id', (ctx) => {
     });
 });
 
-page('/*', app.bookView.initIndexPage);
+
+
+
+// page('*', app.bookView.initIndexPage);
 // page('/books/new', app.createPage.init);
 
 page.start();

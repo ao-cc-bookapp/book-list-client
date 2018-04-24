@@ -4,6 +4,15 @@
   
   .view-title {
     width: 50%;
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .view-form {
+    width: 50%;
+    font-size: 36px;
+    text-align: center;
     margin: 0 auto;
   }
   
@@ -13,7 +22,7 @@
   }
   
   .book-container img {
-    width: 100%;
+    width: 70%;
   }
 
   .single-book-container {
@@ -22,7 +31,8 @@
   }
 
   .single-book-container img {
-      width:100%;
+      width:70%;
+      align-content: center;
   }
   
   .book-items {
@@ -31,17 +41,45 @@
     margin-left:25%;
     margin-top:3.5vw;
   }
+
+
+/* 
+  input#title{
+    width: 20%;
+margin-left: 59%;
+  }
+  input#name {
+  width: 20%;
+  margin-left: 59%;
+  }
+
+  input#author {
+    width: 20%;
+    margin-left: 59%;
+  }
+  input#isbn {
+    width: 20%;
+    margin-left: 59%;
+  }
+  input#image-url {
+    width: 20%;
+    margin-left: 59%;
+  }
+  input#book-description {
+    width: 20%;
+    margin-left: 59%;
+  } */
   
   .book-overlay {
     background: rgba(120, 120, 120, 0.75);
     display: block;
-    width: 80%;
+    width: 70%;
     height: 30%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    /* margin: auto; */
   }
   
   .book-overlay * {

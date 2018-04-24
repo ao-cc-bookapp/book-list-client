@@ -38,5 +38,36 @@ ul#book-list {
 }
 
 nav {
-  margin-top: 160px;
+  margin-top: 20%;
+ 
+}
+
+ul {
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 640px) {
+  .heading-group-h1 {
+      float: left;
+      width: 90%;
+      margin-left: 50px;
+  }
+  
+  .menu-ul {
+      clear: left;
+      display: block;
+  }
+
+  nav {
+      height: 100%;
+  }
+
+  li {
+      display: inline;
+      margin-left: 15px;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
